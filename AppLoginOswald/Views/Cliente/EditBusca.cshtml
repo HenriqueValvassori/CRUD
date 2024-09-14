@@ -1,0 +1,28 @@
+﻿@model AppLoginOswald.Models.Cliente
+@{
+    ViewBag.Title = "EditBusca";
+}
+
+<h2> Selecione o cliente </h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "Control-label col-md-2" })
+            <div>
+                @Html.DropDownListFor(model => model.ClienteID, ViewBag.Lista as SelectList,"Selecione o cliente", new {htmlAttributes = new {@class = "form-control"}})
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Buscar" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<div>
+    @Html.ActionLink("Cancelar", "Index")
+</div>

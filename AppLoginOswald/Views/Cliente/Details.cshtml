@@ -1,0 +1,54 @@
+﻿@model AppLoginOswald.Models.Cliente
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<div class="modal-content">
+    <div class="modal-header">
+       
+
+        <div>
+            <h4>Detalhes do cliente</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Endereco)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Endereco)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Telefone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Cpf)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Atualizar", "Edit", new { id = Model.ClienteID }) |
+            @Html.ActionLink("Voltar", "Select")
+        </p>
+    </div>
+</div>
